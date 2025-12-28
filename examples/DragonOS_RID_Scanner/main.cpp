@@ -223,6 +223,7 @@ static void parse_odid(struct uav_data *UAV, ODID_UAS_Data *UAS_data2)
   if (UAS_data2->BasicIDValid[0])
   {
     strncpy(UAV->uav_id, (char *)UAS_data2->BasicID[0].UASID, ODID_ID_SIZE);
+    UAV->ua_type = UAS_data2->BasicID[0].UAType;
   }
 
   if (UAS_data2->LocationValid)
